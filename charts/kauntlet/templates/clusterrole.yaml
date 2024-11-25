@@ -1,0 +1,161 @@
+{{- if .Values.rbac.create -}}
+apiVersion: {{ include "common.capabilities.rbac.apiVersion" . }}
+kind: ClusterRole
+metadata:
+  name: {{ template "kauntlet.clusterRoleName" . }}
+  labels: {{- include "common.labels.standard" . | nindent 4 }}
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - endpoints
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - events
+    verbs:
+      - create
+      - patch
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+    verbs:
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - ""
+    resources:
+      - services
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - mysqlreplications
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - mysqlreplications/finalizers
+    verbs:
+      - update
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - mysqlreplications/status
+    verbs:
+      - get
+      - patch
+      - update
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - proxysqlsyncs
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - proxysqlsyncs/finalizers
+    verbs:
+      - update
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - proxysqlsyncs/status
+    verbs:
+      - get
+      - patch
+      - update
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - redisclusters
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - redisclusters/finalizers
+    verbs:
+      - update
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - redisclusters/status
+    verbs:
+      - get
+      - patch
+      - update
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - redisreplications
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - redisreplications/finalizers
+    verbs:
+      - update
+  - apiGroups:
+      - kauntlet.foreverit.com
+    resources:
+      - redisreplications/status
+    verbs:
+      - get
+      - patch
+      - update
+{{- end }}
