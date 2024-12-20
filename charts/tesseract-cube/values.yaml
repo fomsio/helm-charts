@@ -14,7 +14,7 @@ image:
   # Repository for container
   registry: docker.io
   repository: u2wkorea/tesseract-cube
-  tag: v1.2.1
+  tag: v1.1.2
   digest: ""
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -36,7 +36,7 @@ agent:
     # Repository for container
     registry: docker.io
     repository: u2wkorea/tesseract-agent
-    tag: v1.2.1
+    tag: v1.1.2
 
 replicaCount: 1
 
