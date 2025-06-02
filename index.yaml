@@ -3,7 +3,7 @@ entries:
   apiserver:
   - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.544203076Z"
+    created: "2025-06-02T01:39:23.460511896Z"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -107,10 +107,47 @@ entries:
     urls:
     - https://fomsio.github.io/helm-charts/foms-api-server/apiserver-1.2.2.tgz
     version: 1.2.2
+  compose-operator:
+  - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.43934899Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: crds.enabled
+      name: crds
+      repository: ""
+      version: 1.2.3
+    description: Chart for foms compose-operator
+    digest: a6765ad3e470cf36d206832c5a8b45d3b770e2d6addf1e9f8557c560cfb16f58
+    name: compose-operator
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/compose-operator/compose-operator-1.2.3.tgz
+    version: 1.2.3
   foms-auth-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.461890064Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms auth
+    digest: 483519bc631b0313cc60fb913c6dce5eaee5a4ea482fb6c416057830f321dc01
+    name: foms-auth-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-auth-ms/foms-auth-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.544967733Z"
+    created: "2025-06-02T01:39:23.461182893Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -127,7 +164,7 @@ entries:
   foms-engine:
   - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.54718165Z"
+    created: "2025-06-02T01:39:23.464002828Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -153,8 +190,24 @@ entries:
     version: 1.2.2
   foms-operatelog-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.46589376Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms operatelog
+    digest: e9fd36d3bddac58ea3056bfcbef409704ee62dc438b17f052e7ced4375729847
+    name: foms-operatelog-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-operatelog-ms/foms-operatelog-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.547988106Z"
+    created: "2025-06-02T01:39:23.465152117Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -171,7 +224,7 @@ entries:
   foms-platform:
   - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.569921644Z"
+    created: "2025-06-02T01:39:23.490204934Z"
     dependencies:
     - alias: ui
       name: ui
@@ -194,8 +247,24 @@ entries:
     version: 1.2.2
   foms-resource-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.491664422Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms resource
+    digest: e4af12e00fa183af0ffba1f0dd53cb0f70008c090a5b3ec3da0d7cfd496282da
+    name: foms-resource-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-resource-ms/foms-resource-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.570699335Z"
+    created: "2025-06-02T01:39:23.490920985Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -211,8 +280,24 @@ entries:
     version: 1.2.2
   foms-service-cnpg-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.493616748Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service cnpg microservice
+    digest: e87824a167260351ec8fa7edff2e0cc2f77da4b3d373ca2a1d1a12d7b9f4e5e5
+    name: foms-service-cnpg-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-cnpg-ms/foms-service-cnpg-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.57171779Z"
+    created: "2025-06-02T01:39:23.492798332Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -228,8 +313,24 @@ entries:
     version: 1.2.2
   foms-service-elasticsearch-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.494934679Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service elasticsearch microservice
+    digest: 9c3dbc7ac1df9692433a70b35454e2246a07cca706f596762ad49b9e1eac673d
+    name: foms-service-elasticsearch-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-elasticsearch-ms/foms-service-elasticsearch-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.572478638Z"
+    created: "2025-06-02T01:39:23.494236806Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -243,10 +344,43 @@ entries:
     urls:
     - https://fomsio.github.io/helm-charts/foms-service-elasticsearch-ms/foms-service-elasticsearch-ms-1.2.2.tgz
     version: 1.2.2
+  foms-service-innodb-cluster-ms:
+  - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.495685047Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service innodb-cluster
+    digest: da2af7855da817cac8ef4ebb5de3dd68281dec5909aa377d1fc8fc13e0a5cde1
+    name: foms-service-innodb-cluster-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-innodb-cluster-ms/foms-service-innodb-cluster-ms-1.2.3.tgz
+    version: 1.2.3
   foms-service-kafka-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.496951407Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service kafka
+    digest: d0de8da688c822237c60c8b5182a929ae68a572a9e9d328a401c31911f85d1aa
+    name: foms-service-kafka-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-kafka-ms/foms-service-kafka-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.573190038Z"
+    created: "2025-06-02T01:39:23.4962957Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -262,8 +396,24 @@ entries:
     version: 1.2.2
   foms-service-mysql-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.499081696Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service mysql
+    digest: 6c5e3c5c972d31193c4e567482c48e746e2540b3b57dbd8f380206d6fd266c20
+    name: foms-service-mysql-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-mysql-ms/foms-service-mysql-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.573966682Z"
+    created: "2025-06-02T01:39:23.497870923Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -279,8 +429,24 @@ entries:
     version: 1.2.2
   foms-service-postgresql-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.50119052Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service postgresql
+    digest: 8eca8c13fc0ef707badbd04f7157a1e433564facaf287a0e692bbd3179914a75
+    name: foms-service-postgresql-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-postgresql-ms/foms-service-postgresql-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.574748063Z"
+    created: "2025-06-02T01:39:23.500027349Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -296,8 +462,24 @@ entries:
     version: 1.2.2
   foms-service-redis-cluster-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.502730623Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service redis-cluster
+    digest: c5b34d0f71509a047fe0a30fd6fa31ec4d0b427203d602758d0f879319ddaf7e
+    name: foms-service-redis-cluster-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-redis-cluster-ms/foms-service-redis-cluster-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.575513311Z"
+    created: "2025-06-02T01:39:23.502019839Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -313,8 +495,24 @@ entries:
     version: 1.2.2
   foms-service-redis-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.503996213Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service redis
+    digest: b6f21ca95941ebf860862c6e91c38c3883bb0e8b05d44b6ceb1c34b279ce462a
+    name: foms-service-redis-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-redis-ms/foms-service-redis-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.576223875Z"
+    created: "2025-06-02T01:39:23.503359244Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -330,8 +528,24 @@ entries:
     version: 1.2.2
   foms-service-zookeeper-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.506439467Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms service zookeeper
+    digest: c8a0e9e54e65e2dd4ebd7b0d94d43c3a846f12c390667f7b7b19ad82cf18a364
+    name: foms-service-zookeeper-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-service-zookeeper-ms/foms-service-zookeeper-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.577390254Z"
+    created: "2025-06-02T01:39:23.505344616Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -347,8 +561,24 @@ entries:
     version: 1.2.2
   foms-user-ms:
   - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.510512192Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms user
+    digest: ad2c190e016c48a40972d6b53b6b3fd0d0ed89e793448632d6f36b01097c5310
+    name: foms-user-ms
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-user-ms/foms-user-ms-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.578904237Z"
+    created: "2025-06-02T01:39:23.509454002Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -365,7 +595,7 @@ entries:
   kauntlet:
   - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.579789968Z"
+    created: "2025-06-02T01:39:23.512201747Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -386,7 +616,7 @@ entries:
   tesseract-cube:
   - apiVersion: v2
     appVersion: v1.2.2
-    created: "2025-05-30T05:02:43.580667073Z"
+    created: "2025-06-02T01:39:23.513455801Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -407,7 +637,23 @@ entries:
   ui:
   - apiVersion: v2
     appVersion: v1.1.1
-    created: "2025-05-30T05:02:43.578168442Z"
+    created: "2025-06-02T01:39:23.508511569Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Chart for foms ui
+    digest: 7835be09cf53f1088310302845e55eb9379f6101370372ef143e56c1b77b1844
+    name: ui
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/foms-ui/ui-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
+    appVersion: v1.1.1
+    created: "2025-06-02T01:39:23.507410011Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -421,4 +667,25 @@ entries:
     urls:
     - https://fomsio.github.io/helm-charts/foms-ui/ui-1.2.2.tgz
     version: 1.2.2
-generated: "2025-05-30T05:02:43.523155831Z"
+  unit-operator:
+  - apiVersion: v2
+    appVersion: v1.2.3
+    created: "2025-06-02T01:39:23.514719699Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    - condition: crds.enabled
+      name: crds
+      repository: ""
+      version: 1.2.3
+    description: Chart for foms unit-operator
+    digest: 2264d3c7653fc60fdca7f99d6ad872ff07605d7dae18b393e09b8b62873c6d0d
+    name: unit-operator
+    type: application
+    urls:
+    - https://fomsio.github.io/helm-charts/unit-operator/unit-operator-1.2.3.tgz
+    version: 1.2.3
+generated: "2025-06-02T01:39:23.43826419Z"
